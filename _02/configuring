@@ -2,12 +2,18 @@ echo L2 > /etc/hostname
 
 ln -s /usr/share/zoneinfo/Europe/Zurich /etc/localtime
 
-locale-gen
-
 # uncomment relevant entry in /etc/locale.gen
 # /var/tmp seems necessary for vi
-mkdir /var/tmp
-vi /etc/locale.gen
+# mkdir /var/tmp
+# vi /etc/locale.gen
+
+cp /etc/locale.gen{,.bak}
+echo "en_US.UTF-8 UTF-8"  > /etc/locale.gen 
+echo "en_US ISO-8859-1"  >> /etc/locale.gen 
+
+
+locale-gen
+
 
 # TODO: Is this correct
 echo LANG=en_US.UTF-8 > /etc/locale.conf

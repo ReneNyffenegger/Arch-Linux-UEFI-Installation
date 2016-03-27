@@ -1,6 +1,8 @@
 grub-mkconfig -o /boot/grub/grub.cfg
+
 # Verify with
-#   efibootmgr -l
+# efibootmgr -l
+
 #
 # if needed, create boot menu entry manually:
 #   efibootmgr -q -c -d /dev/sd1 -p 1 -w -L "GRUB: Arch-Linux" -l '\EFI\arch_grub\grubx64.efi'

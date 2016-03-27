@@ -1,11 +1,8 @@
 # Mount the partitions
+
 mount /dev/sda2 /mnt
 
-cd /mnt
-
-mkdir -p boot/efi home var
-
-cd /
+mkdir -p /mnt/boot/efi home var
 
 mount /dev/sda1 /mnt/boot/efi
 mount /dev/sda3 /mnt/var
@@ -13,3 +10,4 @@ mount /dev/sda4 /mnt/home
 
 # /dev/sda5 (LFS) intentionally not mounted
 
+lsblk
