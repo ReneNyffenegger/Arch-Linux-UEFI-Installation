@@ -1,0 +1,5 @@
+# create /etc/fstab
+# Should the -U flag be used, too?
+
+genfstab -p /mnt > /mnt/etc/fstab
+

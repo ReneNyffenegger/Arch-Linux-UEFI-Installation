@@ -1,0 +1,12 @@
+# Partitioning the hard disk
+
+sgdisk                                       \
+  -Z                                         \
+  -n 0:0:+512MiB  -c 0:BootEfi   -t 0:EF00   \
+  -n 0:0:+15GiB   -c 0:Root      -t 0:8300   \
+  -n 0:0:+15GiB   -c 0:Var       -t 0:8300   \
+  -n 0:0:-102GiB  -c 0:Home      -t 0:8300   \
+  -n 0:0:-2GiB    -c 0:LFS       -t 0:8300   \
+  -n 0:0:-0       -c 0:Swap      -t 0:8200   \
+  -p                                         \
+  /dev/sda

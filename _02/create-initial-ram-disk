@@ -1,0 +1,9 @@
+# Create initial ram disk
+
+# TODO Are these three mounts necessary?
+# mount -t proc     proc /proc
+# mount -t sysfs    sys  /sys
+# mount -t devtmpfs udev /dev
+
+mkinitcpio -p linux
+

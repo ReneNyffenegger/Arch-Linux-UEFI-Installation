@@ -1,0 +1,2 @@
+# Edit mirrorlist
+vim /etc/pacman.d/mirrorlist

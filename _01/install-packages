@@ -1,0 +1,4 @@
+# Install some packages
+# Is wireless_tools really necessary?
+
+pacstrap /mnt base base-devel wpa_supplicant wireless_tools

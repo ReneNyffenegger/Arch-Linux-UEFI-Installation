@@ -1,0 +1,15 @@
+# Connect wifi
+
+# If this does not work use `wifi-menu`
+
+# create /etc/netctl/tq84-wifi
+echo "Description='TQ84 wifi connection'" >  /etc/netctl/tq84-wifi
+echo "Interface=wlp0s29u1u3"             >>  /etc/netctl/tq84-wifi
+echo "Connection=wireless"               >>  /etc/netctl/tq84-wifi
+echo "Connection=wireless"               >>  /etc/netctl/tq84-wifi
+echo "Security=wpa"                      >>  /etc/netctl/tq84-wifi
+echo "IP=dhcp"                           >>  /etc/netctl/tq84-wifi
+echo "ESSID='$WIFI_ESSID'"               >>  /etc/netctl/tq84-wifi
+echo "Key='$WIFI_PASSWORD'"              >>  /etc/netctl/tq84-wifi
+
+netctl start tq84-wifi

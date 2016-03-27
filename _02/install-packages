@@ -1,0 +1,5 @@
+# mount -t efivarfs efivarfs /sys/firmware/efi/efivars
+# mkdir -p /var/lib/pacman
+
+pacman -S grub efibootmgr dosfstools
+
