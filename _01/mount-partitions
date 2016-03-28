@@ -3,9 +3,12 @@
 mount /dev/sda2 /mnt
 
 mkdir -p /mnt/boot/efi home var
-
 mount /dev/sda1 /mnt/boot/efi
+
+mkdir /mnt/var
 mount /dev/sda3 /mnt/var
+
+mkdir /mnt/home
 mount /dev/sda4 /mnt/home
 
 # /dev/sda5 (LFS) intentionally not mounted

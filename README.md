@@ -7,6 +7,7 @@ Scripts for an installation of Arch Linux with UEFI firmware.
 
     cd /media/rene/1C51-C5A2
     git clone https://github.com/ReneNyffenegger/Arch-Linux-UEFI-Installation
+    cd
     umount /dev/sdb1
 
 ## 2. Start Arch Linux live CD
@@ -21,17 +22,17 @@ Insert USB stick, then
 
     mkdir /media
     mount -o umask=000 /dev/sdb1 /media
-    cd /media
+    cd /media/Arch-Linux-UEFI-Installation
 
 ## 4. Set a few environment variables
 
 
-    WIFI_ESSID=essid
-    WIFI_PASSWORD=secret
+    export WIFI_ESSID=essid
+    export WIFI_PASSWORD=secret
 
 ## 5. Start first script
 
-./01-before-chroot.sh
+    ./01-before-chroot.sh
    
 ## 6. chroot to /mnt
 
